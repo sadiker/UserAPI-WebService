@@ -1,6 +1,6 @@
 # UserAPI-WebService
 ## was developed by using  Spring Security,JWT,Spring Data JPA,H2 in-memory DB (moreover MySQL),Spring Validation,Swagger,Lombok,Maven
-#### There are 5 end-points.["/register","/login","/fortrying" is allowed to all users.]["/userlist" is allowed just users with role "ADMIN".]["/user/me" is allowed users with role USER or ADMIN, and response currently user information(taking from jwt token sent with authorization header)]
+#### There are 4 end-points.["/register","/login" is allowed to all users. Sends token. ]["/userlist" is allowed just users with role "ADMIN".]["/user/me" is allowed users with role USER or ADMIN, and response currently user information(taking from jwt token sent with authorization header)]
 
 #### Wants 4 parameter : in order of  "name,email, password and role" for register requests. 2 parameter for login : email,password  
 #### Email is must be valid and password between 8-16 character.
