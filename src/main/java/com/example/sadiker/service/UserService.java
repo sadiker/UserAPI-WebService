@@ -1,6 +1,5 @@
 package com.example.sadiker.service;
 
-
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -37,12 +36,11 @@ public class UserService {
     @Autowired
     private  AuthenticationManager authenticationManager;
 
-   
-
     public IResponse register(String name,String email,String password,String role) {
+       
         Optional<User> optUser = userRepository.findByEmail(email);
         if(optUser.isPresent()){
-            return MyResponse.builder().responseData("Bu email adresiyle önceden kayıt yapılmış.İstek başarısız.").build();
+            return MyResponse.builder().responseData("Bu email adresiyle önceden kayıt yapılmış.İstek başarısız.").build() ; 
         }
         if(password.length()<8 || password.length()>16) {
             return MyResponse.builder().responseData("Min. 8 Max. 16 karakter uzunluğunda şifre giriniz...").build();

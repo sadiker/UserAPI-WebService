@@ -22,8 +22,8 @@ public class SecurityConfig {
     @Lazy JwtAuthenticationFilter jwtAuthenticationFilter) {
       this.authenticationProvider = authenticationProvider;
       this.jwtAuthenticationFilter = jwtAuthenticationFilter;
+   
     }
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
       

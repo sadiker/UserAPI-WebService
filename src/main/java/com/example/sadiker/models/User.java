@@ -83,7 +83,7 @@ public class User implements UserDetails, IResponse {
     public String getUsername() {
         return this.email;
     }
+   
 
-    
     
 }
